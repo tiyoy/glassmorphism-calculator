@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator (Glassmorphism)</title>
+  <link rel="stylesheet" href="./Calculator.css">
+</head>
+
+<body>
+  <div class="bg"></div>
+  <form class="calc" name="calc">
+
+    <input type="text" readonly name="txt" class="out" />
+    <div class="number">
+      <input class="clear" type="button" onclick="calc.txt.value = ''" value="C" />
+      <input type="button" onclick="calc.txt.value += '/'" value="/" />
+      <input type="button" onclick="calc.txt.value += '*'" value="*" />
+      <input type="button" onclick="calc.txt.value += '7'" value="7" />
+      <input type="button" onclick="calc.txt.value += '8'" value="8" />
+      <input type="button" onclick="calc.txt.value += '9'" value="9" />
+      <input type="button" onclick="calc.txt.value += '-'" value="-" />
+      <input type="button" onclick="calc.txt.value += '4'" value="4" />
+      <input type="button" onclick="calc.txt.value += '5'" value="5" />
+      <input type="button" onclick="calc.txt.value += '6'" value="6" />
+      <input class="plus" type="button" onclick="calc.txt.value += '+'" value="+" />
+      <input type="button" onclick="calc.txt.value += '1'" value="1" />
+      <input type="button" onclick="calc.txt.value += '2'" value="2" />
+      <input type="button" onclick="calc.txt.value += '3'" value="3" />
+      <input type="button" onclick="calc.txt.value += '0'" value="0" />
+      <input type="button" onclick="calc.txt.value += '00'" value="00" />
+      <input type="button" onclick="calc.txt.value += '.'" value="." />
+      <input type="button" onclick="calc.txt.value = eval(calc.txt.value)" value="=" /></span>
+    </div>
+  </form>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".calc"), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+    });
+
+  </script>
+</body>
+
+</html>
